@@ -1,0 +1,69 @@
+:root {
+    --nav-background-color: #3993DD;
+    --nav-link-color: #FFF9EF;
+    --nav-link-hover-color: #eaeaea;
+    --nav-link-hover-underline-height: 2px;
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 0.5rem 2%;
+}
+
+.nombre-ecommerce {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+ul {
+    display: flex;
+    gap: 1rem; /* Added for better spacing between links */
+    align-items: center; /* Adjusted to vertically center align items */
+    padding: 0; /* Removed padding */
+}
+
+.nav-categoria-links {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-categoria-links:hover,
+.nav-categoria-links:focus { 
+    color: var(--nav-link-hover-color);
+}
+
+.nav-categoria-links:hover::before,
+.nav-categoria-links:focus::before { 
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: var(--nav-link-hover-underline-height);
+    bottom: 0;
+    left: 0;
+    background-color: var(--nav-link-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-categoria-links::before {
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-categoria-links-cart {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .nombre-ecommerce {
+        font-size: 2rem;
+    }
+}
