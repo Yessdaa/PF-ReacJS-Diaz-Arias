@@ -1,6 +1,6 @@
 import React from 'react';
-import cartImg from './cartImg.svg';
-import './cartWidget.css';
+import cartImg from './CartImg.png';
+import './CartWidget.css';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
